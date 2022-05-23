@@ -1,4 +1,4 @@
- -- Creating tables for PH-EmployeeDB
+-- Creating tables for PH-EmployeeDB
 CREATE TABLE departments (
      dept_no VARCHAR(4) NOT NULL,
      dept_name VARCHAR(40) NOT NULL,
@@ -40,3 +40,32 @@ CREATE TABLE salaries (
 );
 
 SELECT * FROM departments;
+
+SELECT * FROM dept_manager;
+
+CREATE TABLE dept_emp (
+     emp_no INT NOT NULL,
+     dept_no VARCHAR(4) NOT NULL,
+     from_date DATE NOT NULL,
+	 to_date DATE NOT NULL
+);
+
+CREATE TABLE titles (
+     emp_no INT NOT NULL,
+     title VARCHAR NOT NULL,
+     from_date DATE NOT NULL,
+	 to_date DATE NOT NULL
+);
+
+SELECT * FROM dept_emp;
+SELECT * FROM titles;
+
+SELECT first_name, last_name
+FROM employees
+WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31';
+
+
+-- Retirement eligibility
+SELECT first_name, last_name
+FROM employees
+WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31';
